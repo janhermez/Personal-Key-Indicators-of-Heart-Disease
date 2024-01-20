@@ -12,7 +12,9 @@ Use R
 setup only once:
 
 alternatively:
+
 install.packages("tidyverse")
+
 install.packages("rstatix")
 
 ```shell
