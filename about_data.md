@@ -17,7 +17,7 @@ Jakie kroki zastosował do konwersji zbioru danych? Kamil Pytlak
 
 https://github.com/kamilpytlak/data-science-projects/blob/main/heart-disease-prediction/2022/notebooks/data_processing.ipynb
 
-##Wnioski z danych:
+## Wnioski z danych:
 
 Baza nie zawiera żadnych braków danych.  
 
