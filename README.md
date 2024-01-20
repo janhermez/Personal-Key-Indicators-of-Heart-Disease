@@ -86,6 +86,7 @@ Useful commands:
 ## Links
 Kaggle:
 - https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
+
 GitHub repository:
 - https://github.com/kamilpytlak/data-science-projects/blob/main/heart-disease-prediction/2022/notebooks/data_processing.ipynb
 
