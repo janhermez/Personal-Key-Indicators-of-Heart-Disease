@@ -99,3 +99,5 @@ heart %>%
 
 Nie pamiętam, jak to się interpretowało dokładnie, ale w BMI to wygląda dosyć dziwnie.
 
+Teraz można zaprezentować wczytane dane lub ich wycinek przy użyciu wykresów, które będą czytelnie i będą przekazywały, możliwie najwięcej informacji o danych, zachowując estetyczną formę.
+
