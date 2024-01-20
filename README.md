@@ -1,33 +1,64 @@
-# APP123 based deployment
+# Personal Key Indicators of Heart Disease
 
-APP123 is a Python/R soft
+https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
+Baza zawierająca dane o chorobach serca i różnych powiązanych z tym czynnikach ryzyka.
+
+
 ## Configuration 
-
-Use shell
+Use R
 
 ## Initial setup
 setup only once:
 
 ```shell
-./scripts/initial-setup.sh
+library(rstatix)
+library(tidyverse)
+
+heart_df <- read_csv("heart_2020_cleaned.csv")
 ```
 
-## Updating configuration
+## Configuration (data verification)
 
 To create and update application configuration use following scripts:
 
 ```shell
-./scripts/run-one.sh 
-./scripts/run-two.sh up --build app-config
+heart_df %>% 
+  select(where(is.character)) %>% 
+  map(unique)
+
+heart_df %>% 
+  select(where(is.numeric)) %>% 
+  names()
+
+heart <- heart_df
+
+heart %>% 
+  select(where(is.character)) %>% 
+  map(unique) 
+
+pivot1 <- heart %>% 
+  select(-HeartDisease) %>% 
+  map_df(typeof) %>% 
+  pivot_longer(everything()) 
+
+pivot_number <- pivot1 %>% 
+  count(value)
+
+pivot1
+pivot_number
+
+heart %>% 
+  select(where(is.numeric)) %>% 
+  get_summary_stats()
+
+heart %>% 
+  select(where(is.character)) %>% 
+  map(table)
+
+heart %>% 
+  filter(if_any(everything(), ~is.na(.)))
 ```
-
-Second line will update application properties files.
-
-It's a good practice to run also:
-
-```shell
-./scripts/run-tree.sh 
-```
+Baza nie zawiera żadnych braków danych.
 
 ## Running
 
@@ -45,21 +76,17 @@ To run only application dependencies (i.e. databases) run:
 
 ## Secrets
 
- * Add the key to the store:
-   ```bash
-    $ cd deployment
-    $ git secret tell foo@wp.pl
-   ```
  * Commit and push the change to a new branch.
 
 Useful commands:
 * `git secret 
 
 ## Links
+- https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
 
 ### Local (http)
 
-Available with local deployment from this repo.
+Available on github and Rmd file.
 
 #### Apps
 
