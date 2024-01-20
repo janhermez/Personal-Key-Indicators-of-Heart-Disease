@@ -11,6 +11,10 @@ Use R
 ## Initial setup
 setup only once:
 
+alternatively:
+install.packages("tidyverse")
+install.packages("rstatix")
+
 ```shell
 library(rstatix)
 library(tidyverse)
