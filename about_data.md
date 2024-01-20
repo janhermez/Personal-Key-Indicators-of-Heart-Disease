@@ -17,3 +17,11 @@ Jakie kroki zastosował do konwersji zbioru danych? Kamil Pytlak
 
 https://github.com/kamilpytlak/data-science-projects/blob/main/heart-disease-prediction/2022/notebooks/data_processing.ipynb
 
+##Wnioski z danych:
+
+Baza nie zawiera żadnych braków danych.  
+
+Dane odstające: BMI, mental health i physical health.
+
+Zdecydowana większość badanych, bo aż prawie 80%, zadeklarowała uprawianie aktywności fizycznej. Jednocześnie, spora grupa osób, prawie połowa, paliła regularnie papierosy.
+
