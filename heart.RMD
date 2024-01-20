@@ -1,1 +1,88 @@
+---
+title: "Untitled"
+author: "Janek Ciarka"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Personal Key Indicators of Heart Disease
+https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#install.packages('rstatix')
+library(rstatix)
+library(tidyverse)
+```
+
+```{r}
+# https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
+
+
+heart_df <- read_csv("heart_2020_cleaned.csv")
+
+heart_df %>% 
+  select(where(is.character)) %>% 
+  map(unique)
+
+heart_df %>% 
+  select(where(is.numeric)) %>% 
+  names()
+  
+
+
+```
+
+```{r}
+
+heart <- heart_df
+
+heart %>% 
+  select(where(is.character)) %>% 
+  map(unique) 
+
+```
+
+```{r}
+pivot1 <- heart %>% 
+  select(-HeartDisease) %>% 
+  map_df(typeof) %>% 
+  pivot_longer(everything()) 
+
+pivot_number <- pivot1 %>% 
+  count(value)
+
+pivot1
+pivot_number
+
+```
+
+```{r}
+heart %>% 
+  select(where(is.numeric)) %>% 
+  get_summary_stats()
+  
+
+
+```
+
+```{r}
+
+heart %>% 
+  select(where(is.character)) %>% 
+  map(table)
+
+
+```
+
+
+```{r}
+
+heart %>% 
+  filter(if_any(everything(), ~is.na(.)))
+
+
+```
+
+Baza nie zawiera żadnych braków danych.  
 
