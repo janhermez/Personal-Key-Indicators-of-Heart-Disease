@@ -101,3 +101,20 @@ Nie pamiętam, jak to się interpretowało dokładnie, ale w BMI to wygląda dos
 
 Teraz można zaprezentować wczytane dane lub ich wycinek przy użyciu wykresów, które będą czytelnie i będą przekazywały, możliwie najwięcej informacji o danych, zachowując estetyczną formę.
 
+np. 
+
+```{r}
+heart_freq <- heart %>% 
+  select(HeartDisease, Smoking, AlcoholDrinking, Stroke, DiffWalking, 
+         PhysicalActivity, Asthma, KidneyDisease, SkinCancer) %>% 
+  pivot_longer(everything()) %>% 
+  freq_table(name, value) 
+  
+heart_freq %>% 
+  filter(value == "Yes") %>% 
+  ggplot(aes(fct_reorder(name, prop), prop)) +
+  geom_bar(stat = "identity", fill = "darkblue", alpha = 1/3, color = "black") +
+  coord_flip() +
+  labs(y = "Percent", x = "", title = "Procent osób w ramach wybranych zmiennych dychotomicznych")
+```
+
