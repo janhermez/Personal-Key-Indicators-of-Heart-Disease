@@ -86,5 +86,16 @@ heart %>%
 
 Baza nie zawiera żadnych braków danych.
 
-Może warto sprawdzić czy są i ew. jakie dane odstające?
+Sprawdzamy dane odstające
+
+```{r}
+heart %>% 
+  select(where(is.numeric)) %>% 
+  pivot_longer(everything()) %>% 
+  ggplot(aes(value)) +
+  geom_boxplot() +
+  facet_wrap(~name, scales = "free")
+```
+
+Nie pamiętam, jak to się interpretowało dokładnie, ale w BMI to wygląda dosyć dziwnie.
 
