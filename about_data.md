@@ -13,5 +13,7 @@ Z kolei rozwój informatyki umożliwia zastosowanie metod uczenia maszynowego do
 Skąd pochodzi zbiór danych i jakiemu procesowi został poddany? 
 Zbiór danych pochodzi pierwotnie z CDC i stanowi główną część systemu nadzoru nad czynnikami ryzyka behawioralnego (BRFSS), który przeprowadza coroczne ankiety telefoniczne w celu gromadzenia danych na temat stanu zdrowia mieszkańców USA. 
 
-Jakie kroki zastosował do konwersji zbioru danych? https://github.com/kamilpytlak/data-science-projects/blob/main/heart-disease-prediction/2022/notebooks/data_processing.ipynb
+Jakie kroki zastosował do konwersji zbioru danych? Kamil Pytlak
+
+https://github.com/kamilpytlak/data-science-projects/blob/main/heart-disease-prediction/2022/notebooks/data_processing.ipynb
 
