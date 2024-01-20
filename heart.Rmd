@@ -2,7 +2,9 @@
 title: "Untitled"
 author: "Janek Ciarka"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ## Personal Key Indicators of Heart Disease
@@ -84,9 +86,9 @@ heart %>%
 
 ```
 
-Baza nie zawiera żadnych braków danych.
+Baza nie zawiera żadnych braków danych.  
 
-Sprawdzamy dane odstające
+Dane odstające:
 
 ```{r}
 heart %>% 
@@ -96,11 +98,9 @@ heart %>%
   geom_boxplot() +
   facet_wrap(~name, scales = "free")
 ```
+
 Dane odstające: BMI, mental health i physical health.
 
-Teraz można zaprezentować wczytane dane lub ich wycinek przy użyciu wykresów, które będą czytelnie i będą przekazywały, możliwie najwięcej informacji o danych, zachowując estetyczną formę.
-
-np. 
 
 ```{r}
 heart_freq <- heart %>% 
@@ -116,5 +116,5 @@ heart_freq %>%
   coord_flip() +
   labs(y = "Percent", x = "", title = "Procent osób w ramach wybranych zmiennych dychotomicznych")
 ```
-Zdecydowana większość badanych, bo aż prawie 80%, zadeklarowała uprawianie aktywności fizycznej. Jednocześnie, spora grupa osób, prawie połowa, paliła regularnie papierosy.
 
+Zdecydowana większość badanych, bo aż prawie 80%, zadeklarowała uprawianie aktywności fizycznej. Jednocześnie, spora grupa osób, prawie połowa, paliła regularnie papierosy.
