@@ -1,6 +1,7 @@
 # Personal Key Indicators of Heart Disease
 
 https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
+
 Baza zawierająca dane o chorobach serca i różnych powiązanych z tym czynnikach ryzyka.
 
 
