@@ -84,5 +84,7 @@ heart %>%
 
 ```
 
-Baza nie zawiera żadnych braków danych.  
+Baza nie zawiera żadnych braków danych.
+
+Może warto sprawdzić czy są i ew. jakie dane odstające?
 
