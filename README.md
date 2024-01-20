@@ -72,14 +72,9 @@ Baza nie zawiera żadnych braków danych.
 To run the application use:
 
 ```shell
-./scripts/run-app.sh --profile all up -d
+lol
 ```
 
-To run only application dependencies (i.e. databases) run:
-
-```shell
-./scripts/run-app.sh --profile deps up -d
-```
 
 ## Secrets
 
@@ -89,17 +84,23 @@ Useful commands:
 * `git secret 
 
 ## Links
+Kaggle:
 - https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
+GitHub repository:
+- https://github.com/kamilpytlak/data-science-projects/blob/main/heart-disease-prediction/2022/notebooks/data_processing.ipynb
 
 ### Local (http)
 
-Available on github and Rmd file.
+Available on github and Rmd, html, csv, md files.
 
 #### Apps
 
 - app1: http://localhost:8081/
 - app2: http://localhost:8090/
 - app3: http://localhost:8080/
+
+AI
+ChatGPT
 
 #### Admin
 
