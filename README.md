@@ -76,9 +76,8 @@ RStudio
 
 ## Useful commands:
 
- * Commit and push the change to a new branch.
-
-* `git secret 
+* 
+* 
 
 ## Links
 Kaggle:
