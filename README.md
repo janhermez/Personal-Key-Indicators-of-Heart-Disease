@@ -69,11 +69,9 @@ Baza nie zawiera żadnych braków danych.
 
 ## Running
 
-To run the application use:
+To run use:
 
-```shell
-lol
-```
+RStudio
 
 
 ## Useful commands:
@@ -89,7 +87,7 @@ Kaggle:
 GitHub repository:
 - https://github.com/kamilpytlak/data-science-projects/blob/main/heart-disease-prediction/2022/notebooks/data_processing.ipynb
 
-### Local (http)
+### Repository
 
 Available on github and Rmd, html, csv, md files.
 
