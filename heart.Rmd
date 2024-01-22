@@ -119,7 +119,11 @@ heart_freq %>%
 
 Zdecydowana większość badanych, bo aż prawie 80%, zadeklarowała uprawianie aktywności fizycznej. Jednocześnie, spora grupa osób, prawie połowa, paliła regularnie papierosy.
 
+Prezentacja i analiza wybranych statystyk według wykresów:
+
 ```{r}
+#ogólne cechy
+
 #wykres zachorowań według płci
 ggplot(heart_df, aes(x = Sex, fill = HeartDisease)) +
   geom_bar(position = "dodge") +
@@ -134,4 +138,102 @@ ggplot(heart_df, aes(x = AgeCategory, fill = HeartDisease)) +
   scale_fill_manual(values = c("Yes" = "skyblue", "No" = "salmon")) +
   theme_minimal()
 
+#wykres zachorowań według rasy
+ggplot(heart_df, aes(x = Race, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według rasy", x = "Rasa", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "skyblue", "No" = "salmon")) +
+  theme_minimal()
 ```
+
+Zachorowania na choroby serca są częstsze wśród mężczyzn i osób starszych. Rasa nie wydaje się mieć wyraźnego wpływu.
+
+```{r}
+#Tryb życia
+
+#wykres zachorowań według tego czy pali
+ggplot(heart_df, aes(x = Smoking, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według tego czy pali", x = "Czy pali", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "green", "No" = "orange")) +
+  theme_minimal()
+
+#wykres zachorowań według tego czy pije
+ggplot(heart_df, aes(x = AlcoholDrinking, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według tego czy pije", x = "Czy pije", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "green", "No" = "orange")) +
+  theme_minimal()
+
+#wykres zachorowań według tego czy jest fizycznie aktywny
+ggplot(heart_df, aes(x = PhysicalActivity, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według tego czy jest fizycznie aktywny", x = "Fizyczna aktywność", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "green", "No" = "orange")) +
+  theme_minimal()
+
+#wykres zachorowań według ilości snu
+ggplot(heart_df, aes(x = SleepTime, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według ilości snu", x = "Ilość snu", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "green", "No" = "orange")) +
+  theme_minimal()
+
+#wykres zachorowań według BMI
+ggplot(heart_df, aes(x = BMI, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według BMI", x = "BMI", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "green", "No" = "orange")) +
+  theme_minimal()
+
+```
+
+Zażywanie nikotyny wydaje się zwiększać prawdopodobieństwo zachorowania, ale inne czynniki nie mają wyraźnego wpływu w którąkolwiek stronę. Co ciekawe, sen dłuższy niż 8 godzin ale krótszy niż 10 wydaje się być powiązany z nieco częstszymi zachorowaniami.
+
+```{r}
+#Inne choroby
+
+#wykres zachorowań według obecności zawału
+ggplot(heart_df, aes(x = Stroke, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według obecności zawału", x = "Zawał", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  theme_minimal()
+
+#wykres zachorowań według obecności cukrzycy
+ggplot(heart_df, aes(x = Diabetic, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według obecności cukrzycy", x = "Cukrzyca", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  theme_minimal()
+
+#wykres zachorowań według obecności astmy
+ggplot(heart_df, aes(x = Asthma, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według obecności astmy", x = "Astma", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  theme_minimal()
+
+#wykres zachorowań według obecności chroby nerek
+ggplot(heart_df, aes(x = KidneyDisease, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według obecności choroby nerek", x = "Choroba nerek", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  theme_minimal()
+
+#wykres zachorowań według obecności raka skóry
+ggplot(heart_df, aes(x = SkinCancer, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według obecności raka skóry", x = "Rak skóry", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  theme_minimal()
+
+#wykres zachorowań według ogólnego zdrowia
+ggplot(heart_df, aes(x = GenHealth, fill = HeartDisease)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Zachorowania według ogólnego zdrowia", x = "Ogólne zdrowie", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  theme_minimal()
+```
+
+Ogólnie można powiedzieć że choroby serca pojawiają się częściej wśród osób już na coś chorych, lub w inny sposób słabych na zdrowiu.
