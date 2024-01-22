@@ -76,11 +76,10 @@ lol
 ```
 
 
-## Secrets
+## Useful commands:
 
  * Commit and push the change to a new branch.
 
-Useful commands:
 * `git secret 
 
 ## Links
@@ -96,11 +95,10 @@ Available on github and Rmd, html, csv, md files.
 
 #### Apps
 
-- app1: http://localhost:8081/
-- app2: http://localhost:8090/
-- app3: http://localhost:8080/
+possibly use:
 
 AI
+
 ChatGPT
 
 #### Admin
