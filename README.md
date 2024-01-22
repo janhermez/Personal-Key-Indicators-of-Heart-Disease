@@ -26,7 +26,7 @@ heart_df <- read_csv("heart_2020_cleaned.csv")
 
 ## Configuration (data verification)
 
-To create and update application configuration use following scripts:
+Use following scripts (pipe operator)
 
 ```shell
 heart_df %>% 
