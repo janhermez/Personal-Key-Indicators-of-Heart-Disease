@@ -10,7 +10,9 @@ Dane z corocznego badania CDC przeprowadzonego w 2022 r. wśród ponad 400 tys. 
 Według CDC - Centers for Disease Control and Prevention (agencja rządu federalnego Stanów Zjednoczonych wchodząca w skład Departamentu Zdrowia i Opieki Społecznej) choroby serca są główną przyczyną śmierci ludzi w USA (Afroamerykanów, Indian amerykańskich i rdzennych mieszkańców Alaski oraz "rasy białej"). Około połowa Amerykanów (47%) ma co najmniej 1 z 3 głównych czynników ryzyka chorób serca: wysokie ciśnienie krwi, wysoki poziom cholesterolu i palenie. Inne kluczowe wskaźniki obejmują stan cukrzycy, otyłość (wysokie BMI), brak wystarczającej aktywności fizycznej lub picie zbyt dużej ilości alkoholu. Identyfikacja i zapobieganie czynnikom, które mają największy wpływ na choroby serca, jest bardzo ważne w opiece zdrowotnej. 
 
 Z kolei rozwój informatyki umożliwia zastosowanie metod uczenia maszynowego do wykrywania „wzorców” w danych, które mogą przewidzieć stan pacjenta. 
+
 Skąd pochodzi zbiór danych i jakiemu procesowi został poddany? 
+
 Zbiór danych pochodzi pierwotnie z CDC i stanowi główną część systemu nadzoru nad czynnikami ryzyka behawioralnego (BRFSS), który przeprowadza coroczne ankiety telefoniczne w celu gromadzenia danych na temat stanu zdrowia mieszkańców USA. 
 
 Jakie kroki zastosował do konwersji zbioru danych? Kamil Pytlak
