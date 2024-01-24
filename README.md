@@ -6,7 +6,7 @@ Baza zawierająca dane o chorobach serca i różnych powiązanych z tym czynnika
 
 
 ## Configuration 
-Use R
+Use R & Python
 
 ## Initial setup
 setup only once:
@@ -71,7 +71,7 @@ Baza nie zawiera żadnych braków danych.
 
 To run use:
 
-RStudio
+RStudio & Spyder/Jupyter Notebook
 
 
 ## Useful commands:
