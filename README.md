@@ -71,7 +71,7 @@ Baza nie zawiera żadnych braków danych.
 
 To run use:
 
-RStudio & Spyder/Jupyter Notebook
+RStudio & Spyder/Jupyter Notebook/PyCharm
 
 
 ## Useful commands:
