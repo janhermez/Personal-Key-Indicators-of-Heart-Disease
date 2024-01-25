@@ -88,7 +88,7 @@ GitHub repository:
 
 ### Repository
 
-Available on github and Rmd, html, csv, md files.
+Available on github and Rmd, html, csv, md, py files.
 
 #### Apps
 
