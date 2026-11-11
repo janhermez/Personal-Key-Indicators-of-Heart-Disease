@@ -1,0 +1,65 @@
+{
+  "dataset_rows": 319795,
+  "features": 17,
+  "train_rows": 255836,
+  "test_rows": 63959,
+  "positive_fraction": 0.08559545959130067,
+  "method": "stratified 80/20 holdout; random_state=42; one-hot encoding; scaled numeric predictors",
+  "majority_baseline": {
+    "accuracy": 0.9143982864022264,
+    "balanced_accuracy": 0.5,
+    "precision_yes": 0.0,
+    "recall_yes": 0.0,
+    "f1_yes": 0.0,
+    "confusion_matrix_no_yes": [
+      [
+        58484,
+        0
+      ],
+      [
+        5475,
+        0
+      ]
+    ]
+  },
+  "logistic_regression": {
+    "accuracy": 0.916509013586829,
+    "balanced_accuracy": 0.5498257760230406,
+    "precision_yes": 0.5648414985590778,
+    "recall_yes": 0.1073972602739726,
+    "f1_yes": 0.18047882136279927,
+    "confusion_matrix_no_yes": [
+      [
+        58031,
+        453
+      ],
+      [
+        4887,
+        588
+      ]
+    ],
+    "roc_auc": 0.8366401145034711,
+    "average_precision": 0.348889416150989,
+    "converged": true
+  },
+  "logistic_regression_class_weight_balanced": {
+    "accuracy": 0.7487140199190107,
+    "balanced_accuracy": 0.7605335026650539,
+    "precision_yes": 0.222315392275038,
+    "recall_yes": 0.7747945205479452,
+    "f1_yes": 0.34549600912200684,
+    "confusion_matrix_no_yes": [
+      [
+        43645,
+        14839
+      ],
+      [
+        1233,
+        4242
+      ]
+    ],
+    "roc_auc": 0.8371628910564931,
+    "average_precision": 0.34840594948096404,
+    "converged": true
+  }
+}

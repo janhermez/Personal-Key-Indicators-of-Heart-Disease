@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -5,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
-file_path = r"C:\Users\janhe\Downloads\heart_2020_cleaned.csv"
+file_path = Path(__file__).resolve().parent / "heart_2020_cleaned.csv"
 data = pd.read_csv(file_path)
 
 data_with_text = data.copy()

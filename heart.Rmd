@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Personal Key Indicators of Heart Disease — Exploratory Analysis"
 author: "Janek Ciarka"
 date: "`r Sys.Date()`"
 output:
@@ -146,7 +146,7 @@ ggplot(heart_df, aes(x = Race, fill = HeartDisease)) +
   theme_minimal()
 ```
 
-Zachorowania na choroby serca są częstsze wśród mężczyzn i osób starszych. Rasa nie wydaje się mieć wyraźnego wpływu.
+Wykresy pokazują liczebności odpowiedzi w grupach, a nie wskaźniki częstości chorób w obrębie każdej grupy. Nie wystarczają do określania siły związku ani wpływu płci, wieku lub kategorii Race na deklarowaną chorobę serca.
 
 ```{r}
 #Tryb życia
@@ -188,52 +188,52 @@ ggplot(heart_df, aes(x = BMI, fill = HeartDisease)) +
 
 ```
 
-Zażywanie nikotyny wydaje się zwiększać prawdopodobieństwo zachorowania, ale inne czynniki nie mają wyraźnego wpływu w którąkolwiek stronę. Co ciekawe, sen dłuższy niż 8 godzin ale krótszy niż 10 wydaje się być powiązany z nieco częstszymi zachorowaniami.
+Wykresy pokazują liczebności bez standaryzacji względem wielkości grup. Same nie pozwalają stwierdzić wpływu palenia, snu czy innych czynników na chorobę serca. Do porównań należy obliczyć odsetek HeartDisease = Yes w każdej grupie oraz uwzględnić możliwe czynniki zakłócające.
 
 ```{r}
 #Inne choroby
 
-#wykres zachorowań według obecności zawału
+#wykres zachorowań według wystąpienia udaru
 ggplot(heart_df, aes(x = Stroke, fill = HeartDisease)) +
   geom_bar(position = "dodge") +
-  labs(title = "Zachorowania według obecności zawału", x = "Zawał", y = "Zachorowania") +
-  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  labs(title = "Deklaracja udaru a choroba serca", x = "Udar", y = "Zachorowania") +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "darkgray")) +
   theme_minimal()
 
 #wykres zachorowań według obecności cukrzycy
 ggplot(heart_df, aes(x = Diabetic, fill = HeartDisease)) +
   geom_bar(position = "dodge") +
   labs(title = "Zachorowania według obecności cukrzycy", x = "Cukrzyca", y = "Zachorowania") +
-  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "darkgray")) +
   theme_minimal()
 
 #wykres zachorowań według obecności astmy
 ggplot(heart_df, aes(x = Asthma, fill = HeartDisease)) +
   geom_bar(position = "dodge") +
   labs(title = "Zachorowania według obecności astmy", x = "Astma", y = "Zachorowania") +
-  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "darkgray")) +
   theme_minimal()
 
 #wykres zachorowań według obecności chroby nerek
 ggplot(heart_df, aes(x = KidneyDisease, fill = HeartDisease)) +
   geom_bar(position = "dodge") +
   labs(title = "Zachorowania według obecności choroby nerek", x = "Choroba nerek", y = "Zachorowania") +
-  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "darkgray")) +
   theme_minimal()
 
 #wykres zachorowań według obecności raka skóry
 ggplot(heart_df, aes(x = SkinCancer, fill = HeartDisease)) +
   geom_bar(position = "dodge") +
   labs(title = "Zachorowania według obecności raka skóry", x = "Rak skóry", y = "Zachorowania") +
-  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "darkgray")) +
   theme_minimal()
 
 #wykres zachorowań według ogólnego zdrowia
 ggplot(heart_df, aes(x = GenHealth, fill = HeartDisease)) +
   geom_bar(position = "dodge") +
   labs(title = "Zachorowania według ogólnego zdrowia", x = "Ogólne zdrowie", y = "Zachorowania") +
-  scale_fill_manual(values = c("Yes" = "purple", "No" = "dark gray")) +
+  scale_fill_manual(values = c("Yes" = "purple", "No" = "darkgray")) +
   theme_minimal()
 ```
 
-Ogólnie można powiedzieć że choroby serca pojawiają się częściej wśród osób już na coś chorych, lub w inny sposób słabych na zdrowiu.
+Zależności pomiędzy deklarowaną chorobą serca a innymi odpowiedziami ankietowymi wymagają dalszej analizy. Dane mają charakter obserwacyjny: skojarzenia nie oznaczają przyczynowości.
