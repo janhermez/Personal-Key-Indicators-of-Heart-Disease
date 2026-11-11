@@ -1,0 +1,8 @@
+# Local Python environments, compiled files and intermediate analysis outputs
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+# Keep the reviewed example report, not ad-hoc exports by default.
+reports/*.tmp.json
